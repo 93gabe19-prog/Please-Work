@@ -167,4 +167,9 @@ document.getElementById('reset').onclick=()=>{teams.forEach(x=>x.classList.remov
 .team-card .name {
   color: #ffffff !important;
 }
+</style><style id="team-logo-only-all-teams">
+.team:not(.taken-state) .city,
+.team:not(.taken-state) .name{display:none!important}
+.team:not(.taken-state) .logo{height:68px!important;width:68px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.team:not(.taken-state) .logo img{width:64px!important;height:64px!important;object-fit:contain!important}
 </style></body></html>
