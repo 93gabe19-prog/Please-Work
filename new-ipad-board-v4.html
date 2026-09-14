@@ -154,4 +154,17 @@ function update(){const n=teams.filter(x=>x.classList.contains('taken-state')).l
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(Array.isArray(s))teams.forEach((x,i)=>{if(s[i])x.classList.add('taken-state')})}catch(e){}
 teams.forEach(x=>x.addEventListener('click',()=>{x.classList.toggle('taken-state');update()}));
 document.getElementById('reset').onclick=()=>{teams.forEach(x=>x.classList.remove('taken-state'));update()};update();
-</script></body></html>
+</script><style id="final-team-button-color">
+.team-card,
+.team-card:hover,
+.team-card:focus {
+  background: radial-gradient(ellipse at 50% 0%, #12304a 0%, #070c13 48%, #020305 100%) !important;
+  color: #ffffff !important;
+  border-color: #31566e !important;
+  box-shadow: 0 3px 6px #000c, inset 0 0 0 1px #ffffff12 !important;
+}
+.team-card .city,
+.team-card .name {
+  color: #ffffff !important;
+}
+</style></body></html>
